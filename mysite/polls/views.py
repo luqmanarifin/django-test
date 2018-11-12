@@ -3,5 +3,10 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-def hello(request):
-    return HttpResponse("hello")
+def hello(request, id):
+    print request.method
+    return HttpResponse("hello " + str(id))
+
+def likes(request, id):
+    print request.method
+    return HttpResponse("likes " + str(id))
